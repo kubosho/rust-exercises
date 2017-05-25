@@ -10,11 +10,9 @@
 #![allow(dead_code)]
 
 fn main() {
-    println!("Hello, world!");
-    //greetings(name);
+    greetings("kubosho");
 }
 
-fn greetings(name: String) {
+fn greetings(name: &str) {
     println!("Hello, {}!", name);
 }
-
