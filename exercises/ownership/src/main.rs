@@ -11,13 +11,13 @@ fn words() -> (String, String) {
 }
 
 fn output(text: String) {
-    let kanji_only = remove_hiragana(text);
+    let kanji_only = remove_hiragana(&*text);
     println!("{}", kanji_only);
     /*
     ゴール2：次の行をアンコメントすると何がおきるでしょうか？
     これをコンパイルを通すにはどうすれば良いでしょうか？
     */
-    // println!("ひらがなを抜き取ると：{:?} → {:?}", text, kanji_only);
+    println!("ひらがなを抜き取ると：{:?} → {:?}", text, kanji_only);
 
     /*
     ゴール3：データをコピーせずにコンパイルを通すにはどおすれば良いでしょうか？
@@ -25,7 +25,7 @@ fn output(text: String) {
     */
 }
 
-fn remove_hiragana(text: String) -> String {
+fn remove_hiragana(text: &str) -> String {
     /*
      ゴール1：コンパイルを通すには何を変更すれば良いでしょうか
     */
